@@ -7,7 +7,6 @@ Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
 function palindromeChecker(str) {
     const newStr = str.replace(/[\W_]/g, "").toLowerCase();
     const strReversed = newStr.split("").reverse().join("");
-  
     return newStr === strReversed ? "es palindromo" : "no es palindromo";
   }
   
