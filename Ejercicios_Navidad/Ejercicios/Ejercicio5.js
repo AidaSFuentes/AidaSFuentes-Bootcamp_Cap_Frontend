@@ -12,7 +12,7 @@ function validateDNI(dni) {
         numero = dni.substr(0,dni.length-1);
         letr = dni.substr(dni.length-1,1);
      numero = numero % 23;
-     letra='TRWAGMYFPDXBNJZSQVHLCKET';
+     letra='TRWAGMYFPDXBNJZSQVHLCKE';
      letra=letra.substring(numero,numero+1);
     if (letra!=letr.toUpperCase()) {
         alert('DNI erroneo, la letra del NIF no se corresponde');
