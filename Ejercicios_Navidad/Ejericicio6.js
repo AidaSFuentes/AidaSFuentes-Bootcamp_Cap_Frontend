@@ -10,7 +10,7 @@ function palindromeChecker(str) {
     return newStr === strReversed ? "es palindromo" : "no es palindromo";
   }
   
-  console.log(palindromeChecker("Ali tomo tila")); 
+  console.log(palindromeChecker("La ruta nos aporto otro paso natural")); 
   console.log(palindromeChecker("otra cosa")); 
   console.log(palindromeChecker("Amad a la dama")); 
   
