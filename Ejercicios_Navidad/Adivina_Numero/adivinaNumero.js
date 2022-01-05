@@ -1,30 +1,67 @@
-function getRan(min, max) {
-    return min + Math.floor(Math.random() * (max - min + 1));
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+let guessCount = 1;
+let resetButton;
+
+function checkGuess() {
+  const userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = 'Intentos anteriores: ';
   }
-  
-  function aciertaNumero(maxIntentos = 10) {
-    let intentos = 0;
-    let correcto = false;
-    const vecesAdivinar = getRan(0, 100);
-    let entradaUsuario;
-    do {
-        entradaUsuario = parseInt(prompt("Introduce un numero entre el 0 y el 100"));
-      intentos++;
-      if (!entradaUsuario) {
-        console.log("Entrada No Valida.");
-        continue;
-      }
-      if (entradaUsuario < vecesAdivinar) {
-        window.alert(`Tu numero, ${entradaUsuario}, es demasiado bajo! Intentalo de nuevo!`);
-      } else if (entradaUsuario > vecesAdivinar) {
-        window.alert(`Tu numero, ${entradaUsuario}, es demasiado alto! Intentalo de nuevo!`);
-      } else {
-        correcto = true;
-      }
-    } while (intentos < maxIntentos && correcto === false);
-    correcto
-      ? window.alert(`El numero ${vecesAdivinar} fue adivinado correctamente en los  ${intentos} intentos.`)
-      : window.alert(`El numero ${vecesAdivinar} no fue adivinado en los ${intentos}  intentos.`);
+
+  guesses.textContent += userGuess + ' ';
+
+  if (userGuess === randomNumber) {
+    lastResult.textContent = 'Felicidades!!! Lo conseguiste!!! ';
+    lastResult.style.backgroundColor = 'green';
+    lowOrHi.textContent = '';
+    setGameOver();
+  } else if (guessCount === 10) {
+    lastResult.textContent = '!!!GAME OVER!!!';
+    lowOrHi.textContent = '';
+    setGameOver();
+  } else {
+    lastResult.textContent = 'Fallaste!';
+    lastResult.style.backgroundColor = 'red';
+    if(userGuess < randomNumber) {
+      lowOrHi.textContent = 'El numero es demasiado bajo!' ;
+    } else if(userGuess > randomNumber) {
+      lowOrHi.textContent = 'El numero es demasiado alto!!';
+    }
   }
-  
-  aciertaNumero();
+
+  guessCount++;
+  guessField.value = '';
+  guessField.focus();
+}
+
+guessSubmit.addEventListener('click', checkGuess);
+
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = 'Empieza un nuevo juego';
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener('click', resetGame);
+}
+
+function resetGame() {
+  guessCount = 1;
+  const resetParas = document.querySelectorAll('.resultParas p');
+  for (const resetPara of resetParas) {
+    resetPara.textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+  lastResult.style.backgroundColor = 'white';
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
