@@ -1,0 +1,50 @@
+.calculadora {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8b14db;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.calculadora td button {
+    display: block;
+    width: 85px;
+    height: 55px;
+    font-size: 20px;
+    box-align: center;
+    border-radius: 5px;
+}
+
+#igual {
+    height: 94px;
+    width: 85px;
+}
+
+#cero {
+    height: 35px;
+    width: 174px;
+}
+
+#cerocero {
+    height: 35px;
+}
+
+#result {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 30px;
+    width:350px;
+    height: 120px;
+    line-height: 110px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow-y: auto;
+    text-align: right;
+    padding-right: 5px;
+}
+
+#borrar {
+    background-color: orangered;
+}
