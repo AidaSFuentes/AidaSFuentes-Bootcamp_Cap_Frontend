@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <body id ="ventana"><!--onload="inicio()"; me estoy peleando con esto>-->
+        <table class = "calculadora">
+            <tr>
+                <td colspan="4"><span id="result"></span></td>
+            </tr>
+            <tr>
+                <td><button id="borrar">C</button></td>
+                <td><button id="division" class="op1">/</button></td>
+                <td><button id="multiplicacion" class="op1">x</button></td>
+                <td><button id="resto" class="op1">%</button></td>
+            </tr>
+            <tr>
+                <td><button id="siete" class="num">7</button></td>
+                <td><button id="ocho" class="num">8</button></td>
+                <td><button id="nueve" class="num">9</button></td>
+                <td><button id="resta" class="op1">-</button></td>
+            </tr>
+            <tr>
+                <td><button id="cuatro" class="num">4</button></td>
+                <td><button id="cinco" class="num">5</button></td>
+                <td><button id="seis" class="num">6</button></td>
+                <td><button id="suma" class="op1">+</button></td>
+            </tr>
+            <tr>
+                <td><button id="uno" class="num">1</button></td>
+                <td><button id="dos" class="num">2</button></td>
+                <td><button id="tres" class="num">3</button></td>
+                <td rowspan="2"><button id="igual">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="cero" class="num">0</button></td>
+                <td><button id="cerocero" class="num">00</button></td>
+            </tr>
+        </table>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
