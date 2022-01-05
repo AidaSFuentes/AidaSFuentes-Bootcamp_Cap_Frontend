@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./adivinaNumero.js"></script>
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Adivina el Numero Magico</h1>
+
+        <p>Hemos seleccionado un número al azar entre 1 y 100. A ver si eres capaz de adivinarlo en 10 turnos o menos. Te diremos si tu acierto ha sido demasiado alto o demasiado bajo..</p>
     
-</body>
+        <div class="form">
+          <label for="guessField">Introduce un numero: </label>
+          <input type="text" id="guessField" class="guessField">
+          <input type="submit" value="Submit" class="guessSubmit">
+        </div>
+    
+        <div class="resultParas">
+          <p class="guesses"></p>
+          <p class="lastResult"></p>
+          <p class="lowOrHi"></p>
+        </div>
+          <script src="adivinaNumero.js"></script>
+    </body>
 </html>
