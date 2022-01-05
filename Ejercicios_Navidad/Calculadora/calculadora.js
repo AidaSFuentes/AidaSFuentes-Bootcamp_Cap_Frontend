@@ -69,20 +69,20 @@ let signo = "";
                 fin = parseFloat(numero1) % parseFloat(numero2);
                 break;
             case "2\\/''":
-                    fin = Math.sqrt(numero1);
-                    break;
+                fin = Math.sqrt(numero1);
+                 break;
             case "x\\/''":
-                    fin = Math.pow(numero2, Math.pow(numero1, (-1)));
-                    break;
+                fin = Math.pow(numero2, Math.pow(numero1, (-1)));
+                break;
             case "^2":
-                    fin = Math.pow(numero1, 2);
-                    break;
+                fin = Math.pow(numero1, 2);
+                break;
             case "^3":
-                    fin = Math.pow(numero1, 3);
-                    break;
+                fin = Math.pow(numero1, 3);
+                break;
              case "^x":
-                    fin = Math.pow(numero1, numero2);
-                    break;    
+                fin = Math.pow(numero1, numero2);
+                break;    
             default:
                 if(numero1 == 0) {
                     fin = numero2;
