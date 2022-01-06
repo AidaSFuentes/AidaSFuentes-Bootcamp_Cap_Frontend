@@ -38,7 +38,7 @@ body{
 
 #logo{
     flex-grow: 1;
-    max-width: 120px;
+    max-width: 130px;
 }
 #cuerpo-principal{
     max-width: 100%;
