@@ -13,7 +13,8 @@ let signo = "";
         // Igual y Reset
         let igual = document.getElementById("igual");
         let borrar = document.getElementById("borrar");
-    
+        let retroceso = document.getElementById("retroceso");
+        let borradoParcial = document.getElementById("borradoparcial");
          //Recorro y agrego el evento onclick
         numeros.forEach(num => num.addEventListener('click', function() {
             result.textContent += num.innerText;
