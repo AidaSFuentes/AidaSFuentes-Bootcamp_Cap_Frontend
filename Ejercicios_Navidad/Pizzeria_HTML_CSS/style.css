@@ -58,7 +58,7 @@ body{
 }
 #cuerpo-principal{
     max-width: 100%;
-    line-height: 0;
+    display: block;
 }
 .footer{
    top:0%;
