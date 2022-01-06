@@ -50,6 +50,12 @@ body{
     margin-top: 15px;
     margin-left: 25px;
 }
+.cabecera-login--hidden{
+    display: none;
+}
+.cabecera-principal--hidden {
+    display: none;
+}
 #cuerpo-principal{
     max-width: 100%;
     line-height: 0;
