@@ -43,3 +43,11 @@ body{
 #cuerpo-principal{
     max-width: 100%;
 }
+.footer{
+   display: flex;
+   background-color: black; 
+   flex-flow: row wrap;
+   color: white;
+   padding: 10px;
+   align-items: stretch;
+}
