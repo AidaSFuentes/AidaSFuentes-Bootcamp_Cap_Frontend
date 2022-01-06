@@ -36,7 +36,7 @@ body{
 }
 .cabecera-menu{
     flex-grow: 1;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 60px;
     margin-right: 5px;
 }
@@ -47,7 +47,7 @@ body{
 }
 .cabecera-login{
     flex-grow: 1;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 25px;
 }
 #cuerpo-principal{
