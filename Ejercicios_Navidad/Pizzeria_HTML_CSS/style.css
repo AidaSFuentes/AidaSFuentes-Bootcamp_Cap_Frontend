@@ -1,0 +1,42 @@
+body{
+    background-color: beige;
+    color: #860415;
+    margin :0;
+}
+.cabecera-principal {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+}
+.cabecera-principal a{
+    color:white;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding: 2px 5px;
+}
+.cabecera-principal a:hover{
+    color:black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+@media print{
+    .cabecera-principal{
+        display: none;
+    }
+}
+.cabecera-menu{
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#logo{
+    flex-grow: 1;
+    max-width: 120px;
+}
