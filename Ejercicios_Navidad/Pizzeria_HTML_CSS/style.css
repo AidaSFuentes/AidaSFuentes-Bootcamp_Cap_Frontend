@@ -45,6 +45,11 @@ body{
     flex-grow: 1;
     max-width: 130px;
 }
+.cabecera-login{
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-left: 25px;
+}
 #cuerpo-principal{
     max-width: 100%;
 }
