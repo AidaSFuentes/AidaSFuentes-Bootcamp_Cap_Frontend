@@ -44,13 +44,13 @@ body{
     max-width: 100%;
 }
 .footer{
-    
+   top:0%;
    display: flex;
    background-color: black; 
    flex-flow: row wrap;
    color: white;
    padding: 30px;
-   align-items: stretch;
+   align-items:center;
 }
 .footer a {
     color: white;
