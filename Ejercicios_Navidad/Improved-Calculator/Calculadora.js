@@ -26,7 +26,7 @@ class Display {
     this.previousValue = "";
     this.signs = {
       add: "+",
-      division: "/",
+      division: "÷",
       multiply: "*",
       subtract: "-",
     };
