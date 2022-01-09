@@ -14,6 +14,7 @@ class Calculator {
   multiply(num1, num2) {
     return num1 * num2;
   }
+ 
 }
 
 class Display {
@@ -28,7 +29,7 @@ class Display {
       add: "+",
       division: "÷",
       multiply: "*",
-      subtract: "-",
+      subtract: "-"
     };
   }
 
