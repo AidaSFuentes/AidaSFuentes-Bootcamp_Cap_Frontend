@@ -23,14 +23,14 @@ class Display {
     this.displayPreviousValue = displayPreviousValue;
     this.calculator = new Calculator();
     this.typeOperator = undefined;
-    this.currentValue = "";
-    this.previousValue = "";
+    this.currentValue = '';
+    this.previousValue = '';
     this.signs = {
       add: "+",
       division: "÷",
       multiply: "*",
-      subtract: "-"
-    };
+      subtract: "-",
+    }
   }
 
   delete() {
@@ -39,8 +39,8 @@ class Display {
   }
 
   deleteAll() {
-    this.currentValue = "";
-    this.previousValue = "";
+    this.currentValue = '';
+    this.previousValue = '';
     this.typeOperator = undefined;
     this.printValues();
   }
@@ -49,32 +49,27 @@ class Display {
     this.typeOperator !== "equal" && this.calculate();
     this.typeOperator = type;
     this.previousValue = this.currentValue || this.previousValue;
-    this.currentValue = "";
+    this.currentValue = '';
     this.printValues();
   }
 
   addNumber(num) {
-    if (num === "." && this.currentValue.includes(".")) return;
+    if (num === '.' && this.currentValue.includes('.')) return
     this.currentValue = this.currentValue.toString() + num.toString();
     this.printValues();
   }
 
   printValues() {
     this.displayCurrentValue.textContent = this.currentValue;
-    this.displayPreviousValue.textContent = `${this.previousValue} ${
-      this.signs[this.typeOperator] || ""
-    }`;
+    this.displayPreviousValue.textContent = `${this.previousValue} ${this.signs[this.typeOperator] || ''}`;
   }
 
   calculate() {
     const previousValue = parseFloat(this.previousValue);
     const currentValue = parseFloat(this.currentValue);
 
-    if (isNaN(currentValue) || isNaN(previousValue)) return;
-    this.currentValue = this.calculator[this.typeOperator](
-      previousValue,
-      currentValue
-    );
+    if (isNaN(currentValue) || isNaN(previousValue)) return
+     this.currentValue = this.calculator[this.typeOperator](previousValue, currentValue);
   }
 }
 
