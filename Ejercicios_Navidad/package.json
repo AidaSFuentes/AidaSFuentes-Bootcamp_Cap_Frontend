@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "jasmine": "^4.0.2"
-  },
   "devDependencies": {
     "@types/jasmine": "^3.10.3"
   }
