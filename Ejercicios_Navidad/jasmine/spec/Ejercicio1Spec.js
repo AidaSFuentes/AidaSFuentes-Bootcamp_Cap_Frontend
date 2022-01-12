@@ -7,4 +7,9 @@ describe ("testing get a Random Number getRan(min, max", function(){
         max = 70;
         expect(() => getRan(min, max)).toThrowError(RangeError);
     });
+    it("Just works with positive numbers", function(){
+        min = -1;
+        max = 1;
+        expect(() => getRan(nim, max)).toThrowError()
+    })
 });
