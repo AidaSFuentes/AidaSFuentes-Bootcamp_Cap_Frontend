@@ -74,23 +74,23 @@ class Display {
   }
 }
 
-const displayPreviousValue = document.getElementById("previous-value");
-const displayCurrentValue = document.getElementById("current-value");
-const buttonNumbers = document.querySelectorAll(".num");
-const buttonOperators = document.querySelectorAll(".operator");
-const deleteButton = document.querySelector(".delete");
-const deleteAllButton = document.querySelector(".deleteAll");
+// const displayPreviousValue = document.getElementById("previous-value");
+// const displayCurrentValue = document.getElementById("current-value");
+// const buttonNumbers = document.querySelectorAll(".num");
+// const buttonOperators = document.querySelectorAll(".operator");
+// const deleteButton = document.querySelector(".delete");
+// const deleteAllButton = document.querySelector(".deleteAll");
 
-const display = new Display(displayPreviousValue, displayCurrentValue);
+// const display = new Display(displayPreviousValue, displayCurrentValue);
 
-buttonNumbers.forEach((button) => {
-  button.addEventListener("click", () => display.addNumber(button.innerHTML));
-});
+// buttonNumbers.forEach((button) => {
+//   button.addEventListener("click", () => display.addNumber(button.innerHTML));
+// });
 
-buttonOperators.forEach((button) => {
-  button.addEventListener("click", () => display.compute(button.value));
-});
-const calculator = new Calculator();
+// buttonOperators.forEach((button) => {
+//   button.addEventListener("click", () => display.compute(button.value));
+// });
+
 // deleteButton.addEventListener("click", () => display.delete());
 
 // deleteAllButton.addEventListener("click", () => display.deleteAll());
