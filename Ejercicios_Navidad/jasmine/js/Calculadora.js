@@ -1,15 +1,15 @@
-let Calculation = {
+class Calculator {
   add(num1, num2) {
     return num1 + num2;
-  },
+  }
 
   subtract(num1, num2) {
     return num1 - num2;
-  },
+  }
 
   division(num1, num2) {
     return num1 / num2;
-  },
+  }
 
   multiply(num1, num2) {
     return num1 * num2;
@@ -89,7 +89,7 @@ buttonNumbers.forEach((button) => {
 buttonOperators.forEach((button) => {
   button.addEventListener("click", () => display.compute(button.value));
 });
+const calculator = new Calculator();
+// deleteButton.addEventListener("click", () => display.delete());
 
-deleteButton.addEventListener("click", () => display.delete());
-
-deleteAllButton.addEventListener("click", () => display.deleteAll());
+// deleteAllButton.addEventListener("click", () => display.deleteAll());
