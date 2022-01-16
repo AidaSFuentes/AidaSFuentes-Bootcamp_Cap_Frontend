@@ -19,16 +19,15 @@ class Calculator {
 };
 
 class Display {
-  constructor(displayPreviousValue, displayCurrentValue) {
-    this.displayCurrentValue = displayCurrentValue;
-    this.displayPreviousValue = displayPreviousValue;
+  constructor(displayFunction) {
+    this.displayFunction = displayFunction;
     this.calculator = new Calculator();
     this.typeOperator = undefined;
     this.currentValue = '';
     this.previousValue = '';
     this.signs = {
       add: "+",
-      division: "÷",
+      division: "รท",
       multiply: "*",
       subtract: "-",
     }
@@ -49,7 +48,7 @@ class Display {
   compute(type) {
     this.typeOperator !== "equal" && this.calculate();
     this.typeOperator = type;
-    this.previousValue = this.currentValue || this.previousValue;
+    this.currentValue && (this.previousValue = this.currentValue);
     this.currentValue = '';
     this.printValues();
   }
@@ -61,8 +60,7 @@ class Display {
   }
 
   printValues() {
-    this.displayCurrentValue.textContent = this.currentValue;
-    this.displayPreviousValue.textContent = `${this.previousValue} ${this.signs[this.typeOperator] || ''}`;
+    this.displayFunction(this.currentValue, `${this.previousValue} ${this.signs[this.typeOperator] || ''}`);
   }
 
   calculate() {
@@ -70,27 +68,6 @@ class Display {
     const currentValue = parseFloat(this.currentValue);
 
     if (isNaN(currentValue) || isNaN(previousValue)) return
-     this.currentValue = this.calculator[this.typeOperator](previousValue, currentValue);
+    this.currentValue = this.calculator[this.typeOperator](previousValue, currentValue);
   }
 }
-
-// const displayPreviousValue = document.getElementById("previous-value");
-// const displayCurrentValue = document.getElementById("current-value");
-// const buttonNumbers = document.querySelectorAll(".num");
-// const buttonOperators = document.querySelectorAll(".operator");
-// const deleteButton = document.querySelector(".delete");
-// const deleteAllButton = document.querySelector(".deleteAll");
-
-// const display = new Display(displayPreviousValue, displayCurrentValue);
-
-// buttonNumbers.forEach((button) => {
-//   button.addEventListener("click", () => display.addNumber(button.innerHTML));
-// });
-
-// buttonOperators.forEach((button) => {
-//   button.addEventListener("click", () => display.compute(button.value));
-// });
-
-// deleteButton.addEventListener("click", () => display.delete());
-
-// deleteAllButton.addEventListener("click", () => display.deleteAll());
