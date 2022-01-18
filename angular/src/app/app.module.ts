@@ -30,9 +30,7 @@ import { ContactosModule } from './contactos';
     DinamicoComponent,
     CalculadoraComponent,
     FormularioComponent,
-
-
-  ],
+ ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
     MainModule, CommonServicesModule, CommonComponentModule, SecurityModule, MyCoreModule,
