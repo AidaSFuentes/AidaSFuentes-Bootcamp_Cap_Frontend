@@ -35,6 +35,10 @@ export abstract class RESTDAOService<T, K> {
   }
 }
 
+export abstract class ViewModelServiceBase<T, K>{
+
+}
+
 @Injectable({
   providedIn: 'root',
 })
